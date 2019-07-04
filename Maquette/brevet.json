@@ -1,0 +1,216 @@
+{
+    "mockup": {
+        "controls": {
+            "control": [
+                {
+                    "ID": "0",
+                    "typeID": "BrowserWindow",
+                    "zOrder": "0",
+                    "w": "1366",
+                    "h": "768",
+                    "measuredW": "450",
+                    "measuredH": "400",
+                    "x": "62",
+                    "y": "2"
+                },
+                {
+                    "ID": "2",
+                    "typeID": "Label",
+                    "zOrder": "1",
+                    "w": "241",
+                    "measuredW": "219",
+                    "measuredH": "36",
+                    "x": "85",
+                    "y": "102",
+                    "properties": {
+                        "text": "Brevet : Invention",
+                        "size": "28"
+                    }
+                },
+                {
+                    "ID": "4",
+                    "typeID": "Canvas",
+                    "zOrder": "2",
+                    "w": "1334",
+                    "h": "559",
+                    "measuredW": "100",
+                    "measuredH": "70",
+                    "x": "78",
+                    "y": "169"
+                },
+                {
+                    "ID": "7",
+                    "typeID": "Label",
+                    "zOrder": "3",
+                    "w": "294",
+                    "measuredW": "222",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "184",
+                    "properties": {
+                        "size": "20",
+                        "text": "Nom du brevet existant :"
+                    }
+                },
+                {
+                    "ID": "8",
+                    "typeID": "Label",
+                    "zOrder": "4",
+                    "w": "425",
+                    "measuredW": "179",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "228",
+                    "properties": {
+                        "size": "20",
+                        "text": "Nom de l'inventeur :"
+                    }
+                },
+                {
+                    "ID": "9",
+                    "typeID": "Label",
+                    "zOrder": "5",
+                    "w": "325",
+                    "measuredW": "73",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "272",
+                    "properties": {
+                        "size": "20",
+                        "text": "N°INPI :"
+                    }
+                },
+                {
+                    "ID": "10",
+                    "typeID": "Label",
+                    "zOrder": "6",
+                    "w": "514",
+                    "measuredW": "274",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "316",
+                    "properties": {
+                        "size": "20",
+                        "text": "Droit de priorité sur le brevet :"
+                    }
+                },
+                {
+                    "ID": "19",
+                    "typeID": "Label",
+                    "zOrder": "7",
+                    "w": "325",
+                    "measuredW": "67",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "360",
+                    "properties": {
+                        "size": "20",
+                        "text": "Dépôt :"
+                    }
+                },
+                {
+                    "ID": "20",
+                    "typeID": "Label",
+                    "zOrder": "8",
+                    "w": "514",
+                    "measuredW": "488",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "404",
+                    "properties": {
+                        "size": "20",
+                        "text": "Amélioration de l’invention ou descriptif de l’invention :"
+                    }
+                },
+                {
+                    "ID": "21",
+                    "typeID": "ButtonBar",
+                    "zOrder": "9",
+                    "measuredW": "143",
+                    "measuredH": "27",
+                    "x": "169",
+                    "y": "360",
+                    "properties": {
+                        "text": "Interne, Externe"
+                    }
+                },
+                {
+                    "ID": "23",
+                    "typeID": "TextArea",
+                    "zOrder": "10",
+                    "w": "500",
+                    "h": "152",
+                    "measuredW": "200",
+                    "measuredH": "140",
+                    "x": "101",
+                    "y": "456"
+                },
+                {
+                    "ID": "24",
+                    "typeID": "Label",
+                    "zOrder": "11",
+                    "w": "425",
+                    "measuredW": "165",
+                    "measuredH": "28",
+                    "x": "679",
+                    "y": "184",
+                    "properties": {
+                        "size": "20",
+                        "text": "Projet brevetable :"
+                    }
+                },
+                {
+                    "ID": "25",
+                    "typeID": "Label",
+                    "zOrder": "12",
+                    "w": "425",
+                    "measuredW": "282",
+                    "measuredH": "28",
+                    "x": "679",
+                    "y": "228",
+                    "properties": {
+                        "size": "20",
+                        "text": "Engagements des démarches :"
+                    }
+                },
+                {
+                    "ID": "27",
+                    "typeID": "ButtonBar",
+                    "zOrder": "13",
+                    "measuredW": "143",
+                    "measuredH": "27",
+                    "x": "977",
+                    "y": "228",
+                    "properties": {
+                        "text": "Interne, Externe"
+                    }
+                },
+                {
+                    "ID": "28",
+                    "typeID": "Label",
+                    "zOrder": "14",
+                    "w": "425",
+                    "measuredW": "317",
+                    "measuredH": "28",
+                    "x": "679",
+                    "y": "272",
+                    "properties": {
+                        "size": "20",
+                        "text": "Société et nom du correspondant :"
+                    }
+                }
+            ]
+        },
+        "attributes": {
+            "name": "Brevet",
+            "order": 938478.1725557337,
+            "parentID": null
+        },
+        "resourceID": "EF3068F2-6515-41E9-9626-79BDCBD50D28",
+        "mockupH": "768",
+        "mockupW": "1366",
+        "measuredW": "1428",
+        "measuredH": "770",
+        "version": "1.0"
+    }
+}
