@@ -1,0 +1,275 @@
+{
+    "mockup": {
+        "controls": {
+            "control": [
+                {
+                    "ID": "0",
+                    "typeID": "BrowserWindow",
+                    "zOrder": "0",
+                    "w": "1366",
+                    "h": "768",
+                    "measuredW": "450",
+                    "measuredH": "400",
+                    "x": "62",
+                    "y": "2"
+                },
+                {
+                    "ID": "1",
+                    "typeID": "Label",
+                    "zOrder": "1",
+                    "w": "215",
+                    "measuredW": "189",
+                    "measuredH": "28",
+                    "x": "69",
+                    "y": "81",
+                    "properties": {
+                        "size": "20",
+                        "text": "Projet n°2019-06-02"
+                    }
+                },
+                {
+                    "ID": "2",
+                    "typeID": "Label",
+                    "zOrder": "2",
+                    "w": "241",
+                    "measuredW": "233",
+                    "measuredH": "36",
+                    "x": "624",
+                    "y": "81",
+                    "properties": {
+                        "text": "Nom de la société",
+                        "size": "28"
+                    }
+                },
+                {
+                    "ID": "3",
+                    "typeID": "Label",
+                    "zOrder": "3",
+                    "w": "215",
+                    "measuredW": "231",
+                    "measuredH": "28",
+                    "x": "69",
+                    "y": "109",
+                    "properties": {
+                        "size": "20",
+                        "text": "Demandeur : lorem ipsum"
+                    }
+                },
+                {
+                    "ID": "4",
+                    "typeID": "Canvas",
+                    "zOrder": "4",
+                    "w": "1334",
+                    "h": "559",
+                    "measuredW": "100",
+                    "measuredH": "70",
+                    "x": "78",
+                    "y": "169"
+                },
+                {
+                    "ID": "5",
+                    "typeID": "MenuBar",
+                    "zOrder": "5",
+                    "w": "325",
+                    "h": "32",
+                    "measuredW": "333",
+                    "measuredH": "32",
+                    "x": "78",
+                    "y": "137",
+                    "properties": {
+                        "text": "Projet, Finance, Validation, Accord, Contrat"
+                    }
+                },
+                {
+                    "ID": "7",
+                    "typeID": "Label",
+                    "zOrder": "6",
+                    "w": "294",
+                    "measuredW": "133",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "184",
+                    "properties": {
+                        "size": "20",
+                        "text": "Avis favorable :"
+                    }
+                },
+                {
+                    "ID": "8",
+                    "typeID": "Label",
+                    "zOrder": "7",
+                    "w": "425",
+                    "measuredW": "412",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "228",
+                    "properties": {
+                        "size": "20",
+                        "text": "Demande de validation à la holding par écrit :"
+                    }
+                },
+                {
+                    "ID": "9",
+                    "typeID": "Label",
+                    "zOrder": "8",
+                    "w": "268",
+                    "measuredW": "158",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "272",
+                    "properties": {
+                        "size": "20",
+                        "text": "Avis défavorable :"
+                    }
+                },
+                {
+                    "ID": "10",
+                    "typeID": "Label",
+                    "zOrder": "9",
+                    "w": "268",
+                    "measuredW": "102",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "316",
+                    "properties": {
+                        "size": "20",
+                        "text": "Technique :"
+                    }
+                },
+                {
+                    "ID": "18",
+                    "typeID": "HRule",
+                    "zOrder": "10",
+                    "w": "60",
+                    "measuredW": "100",
+                    "measuredH": "10",
+                    "x": "211",
+                    "y": "159"
+                },
+                {
+                    "ID": "23",
+                    "typeID": "CheckBox",
+                    "zOrder": "11",
+                    "w": "169",
+                    "h": "30",
+                    "measuredW": "90",
+                    "measuredH": "23",
+                    "x": "115",
+                    "y": "344",
+                    "properties": {
+                        "text": "Norme DTU"
+                    }
+                },
+                {
+                    "ID": "26",
+                    "typeID": "CheckBox",
+                    "zOrder": "12",
+                    "w": "169",
+                    "h": "30",
+                    "measuredW": "20",
+                    "measuredH": "23",
+                    "x": "519",
+                    "y": "227",
+                    "properties": {
+                        "text": ""
+                    }
+                },
+                {
+                    "ID": "27",
+                    "typeID": "CheckBox",
+                    "zOrder": "13",
+                    "w": "169",
+                    "h": "30",
+                    "measuredW": "87",
+                    "measuredH": "23",
+                    "x": "115",
+                    "y": "371",
+                    "properties": {
+                        "text": "Norme DTA"
+                    }
+                },
+                {
+                    "ID": "28",
+                    "typeID": "Label",
+                    "zOrder": "14",
+                    "w": "268",
+                    "measuredW": "180",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "417",
+                    "properties": {
+                        "size": "20",
+                        "text": "Section assurance :"
+                    }
+                },
+                {
+                    "ID": "29",
+                    "typeID": "Label",
+                    "zOrder": "15",
+                    "w": "268",
+                    "measuredW": "206",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "454",
+                    "properties": {
+                        "size": "20",
+                        "text": "Société demandeuse :"
+                    }
+                },
+                {
+                    "ID": "31",
+                    "typeID": "Label",
+                    "zOrder": "16",
+                    "w": "268",
+                    "measuredW": "211",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "489",
+                    "properties": {
+                        "size": "20",
+                        "text": "Type de normatisation :"
+                    }
+                },
+                {
+                    "ID": "32",
+                    "typeID": "Label",
+                    "zOrder": "17",
+                    "w": "268",
+                    "measuredW": "197",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "526",
+                    "properties": {
+                        "size": "20",
+                        "text": "Validation assurance :"
+                    }
+                },
+                {
+                    "ID": "33",
+                    "typeID": "CheckBox",
+                    "zOrder": "18",
+                    "w": "169",
+                    "h": "30",
+                    "measuredW": "20",
+                    "measuredH": "23",
+                    "x": "300",
+                    "y": "525",
+                    "properties": {
+                        "text": ""
+                    }
+                }
+            ]
+        },
+        "attributes": {
+            "name": "Section Validation",
+            "order": 938450.0218765325,
+            "parentID": null
+        },
+        "resourceID": "82F6B97A-37D5-4BFD-AF88-75EB59B525A9",
+        "mockupH": "768",
+        "mockupW": "1366",
+        "measuredW": "1428",
+        "measuredH": "770",
+        "version": "1.0"
+    }
+}
