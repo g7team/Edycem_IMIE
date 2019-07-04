@@ -1,0 +1,257 @@
+{
+    "mockup": {
+        "controls": {
+            "control": [
+                {
+                    "ID": "0",
+                    "typeID": "BrowserWindow",
+                    "zOrder": "0",
+                    "w": "1366",
+                    "h": "768",
+                    "measuredW": "450",
+                    "measuredH": "400",
+                    "x": "62",
+                    "y": "2"
+                },
+                {
+                    "ID": "1",
+                    "typeID": "Label",
+                    "zOrder": "1",
+                    "w": "215",
+                    "measuredW": "189",
+                    "measuredH": "28",
+                    "x": "69",
+                    "y": "81",
+                    "properties": {
+                        "size": "20",
+                        "text": "Projet n°2019-06-02"
+                    }
+                },
+                {
+                    "ID": "2",
+                    "typeID": "Label",
+                    "zOrder": "2",
+                    "w": "241",
+                    "measuredW": "233",
+                    "measuredH": "36",
+                    "x": "624",
+                    "y": "81",
+                    "properties": {
+                        "text": "Nom de la société",
+                        "size": "28"
+                    }
+                },
+                {
+                    "ID": "3",
+                    "typeID": "Label",
+                    "zOrder": "3",
+                    "w": "215",
+                    "measuredW": "231",
+                    "measuredH": "28",
+                    "x": "69",
+                    "y": "109",
+                    "properties": {
+                        "size": "20",
+                        "text": "Demandeur : lorem ipsum"
+                    }
+                },
+                {
+                    "ID": "4",
+                    "typeID": "Canvas",
+                    "zOrder": "4",
+                    "w": "1334",
+                    "h": "559",
+                    "measuredW": "100",
+                    "measuredH": "70",
+                    "x": "78",
+                    "y": "168"
+                },
+                {
+                    "ID": "5",
+                    "typeID": "MenuBar",
+                    "zOrder": "5",
+                    "w": "325",
+                    "h": "32",
+                    "measuredW": "333",
+                    "measuredH": "32",
+                    "x": "78",
+                    "y": "137",
+                    "properties": {
+                        "text": "Projet, Finance, Validation, Accord, Contrat"
+                    }
+                },
+                {
+                    "ID": "7",
+                    "typeID": "Label",
+                    "zOrder": "6",
+                    "w": "294",
+                    "measuredW": "264",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "184",
+                    "properties": {
+                        "size": "20",
+                        "text": "Etude de marché nécessaire"
+                    }
+                },
+                {
+                    "ID": "8",
+                    "typeID": "Label",
+                    "zOrder": "7",
+                    "w": "268",
+                    "measuredW": "152",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "228",
+                    "properties": {
+                        "size": "20",
+                        "text": "Nom du cabinet :"
+                    }
+                },
+                {
+                    "ID": "9",
+                    "typeID": "Label",
+                    "zOrder": "8",
+                    "w": "268",
+                    "measuredW": "51",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "272",
+                    "properties": {
+                        "size": "20",
+                        "text": "ROI : "
+                    }
+                },
+                {
+                    "ID": "10",
+                    "typeID": "Label",
+                    "zOrder": "9",
+                    "w": "268",
+                    "measuredW": "88",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "316",
+                    "properties": {
+                        "size": "20",
+                        "text": "Exemple :"
+                    }
+                },
+                {
+                    "ID": "18",
+                    "typeID": "HRule",
+                    "zOrder": "10",
+                    "w": "51",
+                    "measuredW": "100",
+                    "measuredH": "10",
+                    "x": "148",
+                    "y": "159"
+                },
+                {
+                    "ID": "19",
+                    "typeID": "CheckBox",
+                    "zOrder": "11",
+                    "measuredW": "20",
+                    "measuredH": "23",
+                    "x": "378",
+                    "y": "186",
+                    "properties": {
+                        "text": ""
+                    }
+                },
+                {
+                    "ID": "20",
+                    "typeID": "TextArea",
+                    "zOrder": "12",
+                    "w": "301",
+                    "h": "149",
+                    "measuredW": "200",
+                    "measuredH": "140",
+                    "x": "97",
+                    "y": "357"
+                },
+                {
+                    "ID": "21",
+                    "typeID": "Label",
+                    "zOrder": "13",
+                    "w": "136",
+                    "measuredW": "114",
+                    "measuredH": "28",
+                    "x": "635",
+                    "y": "184",
+                    "properties": {
+                        "size": "20",
+                        "text": "Partenaires :"
+                    }
+                },
+                {
+                    "ID": "22",
+                    "typeID": "TextInput",
+                    "zOrder": "14",
+                    "w": "108",
+                    "measuredW": "108",
+                    "measuredH": "27",
+                    "x": "771",
+                    "y": "184",
+                    "properties": {
+                        "text": "Nom de société"
+                    }
+                },
+                {
+                    "ID": "23",
+                    "typeID": "CheckBox",
+                    "zOrder": "15",
+                    "w": "169",
+                    "h": "30",
+                    "measuredW": "134",
+                    "measuredH": "23",
+                    "x": "895",
+                    "y": "183",
+                    "properties": {
+                        "text": "Enquète financière"
+                    }
+                },
+                {
+                    "ID": "24",
+                    "typeID": "TextInput",
+                    "zOrder": "16",
+                    "w": "156",
+                    "measuredW": "128",
+                    "measuredH": "27",
+                    "x": "1044",
+                    "y": "184",
+                    "properties": {
+                        "text": "Objet du partnariat"
+                    }
+                },
+                {
+                    "ID": "25",
+                    "typeID": "CircleButton",
+                    "zOrder": "17",
+                    "w": "33",
+                    "h": "33",
+                    "measuredW": "48",
+                    "measuredH": "48",
+                    "x": "1227",
+                    "y": "181",
+                    "properties": {
+                        "icon": {
+                            "ID": "plus",
+                            "size": "small"
+                        }
+                    }
+                }
+            ]
+        },
+        "attributes": {
+            "name": "Section Finance",
+            "order": 938438.6027273459,
+            "parentID": null
+        },
+        "resourceID": "0630F532-E291-44B9-850B-196EAE7D7B53",
+        "mockupH": "768",
+        "mockupW": "1366",
+        "measuredW": "1428",
+        "measuredH": "770",
+        "version": "1.0"
+    }
+}
