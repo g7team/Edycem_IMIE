@@ -1,0 +1,163 @@
+{
+    "mockup": {
+        "controls": {
+            "control": [
+                {
+                    "ID": "0",
+                    "typeID": "BrowserWindow",
+                    "zOrder": "0",
+                    "w": "1366",
+                    "h": "768",
+                    "measuredW": "450",
+                    "measuredH": "400",
+                    "x": "62",
+                    "y": "2"
+                },
+                {
+                    "ID": "1",
+                    "typeID": "Label",
+                    "zOrder": "1",
+                    "w": "215",
+                    "measuredW": "189",
+                    "measuredH": "28",
+                    "x": "69",
+                    "y": "81",
+                    "properties": {
+                        "size": "20",
+                        "text": "Projet n°2019-06-02"
+                    }
+                },
+                {
+                    "ID": "2",
+                    "typeID": "Label",
+                    "zOrder": "2",
+                    "w": "241",
+                    "measuredW": "233",
+                    "measuredH": "36",
+                    "x": "624",
+                    "y": "81",
+                    "properties": {
+                        "text": "Nom de la société",
+                        "size": "28"
+                    }
+                },
+                {
+                    "ID": "3",
+                    "typeID": "Label",
+                    "zOrder": "3",
+                    "w": "215",
+                    "measuredW": "231",
+                    "measuredH": "28",
+                    "x": "69",
+                    "y": "109",
+                    "properties": {
+                        "size": "20",
+                        "text": "Demandeur : lorem ipsum"
+                    }
+                },
+                {
+                    "ID": "4",
+                    "typeID": "Canvas",
+                    "zOrder": "4",
+                    "w": "1334",
+                    "h": "559",
+                    "measuredW": "100",
+                    "measuredH": "70",
+                    "x": "78",
+                    "y": "169"
+                },
+                {
+                    "ID": "5",
+                    "typeID": "MenuBar",
+                    "zOrder": "5",
+                    "w": "325",
+                    "h": "32",
+                    "measuredW": "333",
+                    "measuredH": "32",
+                    "x": "78",
+                    "y": "137",
+                    "properties": {
+                        "text": "Projet, Finance, Validation, Accord, Contrat"
+                    }
+                },
+                {
+                    "ID": "7",
+                    "typeID": "Label",
+                    "zOrder": "6",
+                    "w": "294",
+                    "measuredW": "121",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "184",
+                    "properties": {
+                        "size": "20",
+                        "text": "Nom license :"
+                    }
+                },
+                {
+                    "ID": "8",
+                    "typeID": "Label",
+                    "zOrder": "7",
+                    "w": "425",
+                    "measuredW": "116",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "228",
+                    "properties": {
+                        "size": "20",
+                        "text": "Nom société"
+                    }
+                },
+                {
+                    "ID": "9",
+                    "typeID": "Label",
+                    "zOrder": "8",
+                    "w": "325",
+                    "measuredW": "306",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "272",
+                    "properties": {
+                        "size": "20",
+                        "text": "Accord pour la partie Fabrication :"
+                    }
+                },
+                {
+                    "ID": "10",
+                    "typeID": "Label",
+                    "zOrder": "9",
+                    "w": "514",
+                    "measuredW": "505",
+                    "measuredH": "28",
+                    "x": "94",
+                    "y": "316",
+                    "properties": {
+                        "size": "20",
+                        "text": "Accord pour la partie “Distribution et / ou commerciale :"
+                    }
+                },
+                {
+                    "ID": "18",
+                    "typeID": "HRule",
+                    "zOrder": "10",
+                    "w": "46",
+                    "measuredW": "100",
+                    "measuredH": "10",
+                    "x": "348",
+                    "y": "159"
+                }
+            ]
+        },
+        "attributes": {
+            "name": "Section Contrat",
+            "order": 938470.1282966074,
+            "parentID": null
+        },
+        "resourceID": "44F64855-D615-4C7D-8307-6F58AEB07D58",
+        "mockupH": "768",
+        "mockupW": "1366",
+        "measuredW": "1428",
+        "measuredH": "770",
+        "version": "1.0"
+    }
+}
