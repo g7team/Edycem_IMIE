@@ -15,9 +15,9 @@ class Project(models.Model):
     section_project = models.ForeignKey(
         'SectionProject', models.PROTECT, blank=True, null=True,
     )
-    finance = models.ForeignKey(
-        'Finance', models.PROTECT, blank=True, null=True,
-    )
+    # finance = models.ForeignKey(
+    #     'Finance', models.PROTECT, blank=True, null=True,
+    # )
     partner = models.ForeignKey(
         'Partner', models.PROTECT, blank=True, null=True,
     )
@@ -50,7 +50,7 @@ class Member(models.Model):
     USER_TYPE_MANAGER = 2
     USER_TYPE_CHOICES = [
         (USER_TYPE_EMPLOYEE, _("Employé")),
-        (USER_TYPE_ASSO, _("Manager")),
+        (USER_TYPE_MANAGER, _("Manager")),
     ]
 
     id = models.AutoField(primary_key=True)
@@ -85,9 +85,9 @@ class SectionProject(models.Model):
     )
     site = models.CharField(max_length=255)
     deadline = models.DateTimeField()
-    goal = TextField()
-    is_chaire = BooleanField(default=False)
-    document = FileField(upload_to=None, max_length=100)
+    goal = models.TextField()
+    is_chaire = models.BooleanField(default=False)
+    document = models.FileField(upload_to=None, max_length=100)
 
 
 class SectionFinance(models.Model):
@@ -124,7 +124,7 @@ class Activity(models.Model):
     PROGRESS_CHOICES = [
         (PROGRESS_PENDING, _("en attente")),
         (PROGRESS_ONGOING, _("en cours")),
-        (PROGRESS_CHOICES, _("terminé")),
+        (PROGRESS_DONE, _("terminé")),
     ]
 
     PRIORITY_SMALL = 0
@@ -159,7 +159,7 @@ class task(models.Model):
     PROGRESS_CHOICES = [
         (PROGRESS_PENDING, _("en attente")),
         (PROGRESS_ONGOING, _("en cours")),
-        (PROGRESS_CHOICES, _("terminé")),
+        (PROGRESS_DONE, _("terminé")),
     ]
 
     id = models.AutoField(primary_key=True)
