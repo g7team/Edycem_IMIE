@@ -9,14 +9,20 @@ import java.util.List;
 @Service
 public abstract class AbstractServiceImpl<Response, Request> implements AbstractService<Response,Request> {
 
-    AbstractRepository repository;
+    AbstractRepository<Response> repository;
 
     public List<Response> getAll() {
-        return null;
+        return repository.findAll();
     }
 
     public Response getById(Long id) {
-        return null;
+        boolean isActive = repository.findById(id).isPresent();
+
+        if(!isActive) {
+            return null;
+        } else {
+            return repository.findById(id).get();
+        }
     }
 
     public Response create(Request request) {

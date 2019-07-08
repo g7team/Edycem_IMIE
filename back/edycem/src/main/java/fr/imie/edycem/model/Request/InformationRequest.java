@@ -1,4 +1,6 @@
 package fr.imie.edycem.model.Request;
 
-public class InformationRequest {
+import fr.imie.edycem.model.Information;
+
+public class InformationRequest extends Information {
 }
