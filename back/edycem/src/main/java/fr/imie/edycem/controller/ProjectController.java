@@ -32,7 +32,7 @@ public class ProjectController extends AbstractController<ProjectRequest , Proje
         return this.projectService.create(projectRequest);
     }
 
-    @PutMapping
+    @PutMapping(value = "/{id}")
     public ProjectResponse updateProject(@PathVariable( "id" ) Long id, @RequestBody ProjectRequest projectRequest) {
         Preconditions.checkNotNull(projectRequest);
         RestPreconditions.checkFound(this.projectService.getById(id));

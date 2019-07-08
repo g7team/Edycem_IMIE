@@ -7,7 +7,7 @@ public class User {
 
     private Integer id;
     private String name;
-    private String surName;
+    private String surname;
     private String mail;
     private String password;
 
@@ -28,12 +28,12 @@ public class User {
         this.name = name;
     }
 
-    public String getSurName() {
-        return surName;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getMail() {
