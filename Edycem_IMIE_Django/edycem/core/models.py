@@ -55,11 +55,7 @@ class Member(AbstractUser):
     ]
 
     id = models.AutoField(primary_key=True)
-    user_name = models.CharField(
-        max_length=255, unique=True)
-    _password = models.CharField(
-        max_length=255, blank=True)
-    email = models.EmailField(max_length=255)
+    email = models.EmailField(max_length=255, verbose_name=_("e-mail"))
     user_type = models.PositiveSmallIntegerField(
         choices=USER_TYPE_CHOICES, default=USER_TYPE_EMPLOYEE)
 

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Accueil - Edycem{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Bonjour {{ user.username }}!
+  <p><a class="btn btn-primary" href="{% url 'logout' %}">Me déconnecter</a></p>
+{% else %}
+  <p>Vous n'êtes pas connecté</p>
+  <a class="btn btn-primary" href="{% url 'login' %}">Connexion</a>
+{% endif %}
+{% endblock %}
