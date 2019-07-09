@@ -13,7 +13,7 @@ CREATE TABLE priority_status (
    size ENUM('urgent', 'normal', 'low')
 );
 
-CREATE TABLE avancement_status (
+CREATE TABLE progress_status (
    name VARCHAR(255),
    size ENUM('on_standby', 'in_progress', 'done')
 );
@@ -77,7 +77,7 @@ CREATE TABLE activity (
   start_date datetime,
   end_date datetime,
   responsable varchar(255),
-  progress avancement_status,
+  progress progress_status,
   priority priority_status
 );
 
@@ -86,7 +86,7 @@ CREATE TABLE task (
   name varchar(255),
   start_date datetime,
   end_date datetime,
-  progress avancement_status,
+  progress progress_status,
   activity_id int(4)
 );
 
@@ -148,7 +148,7 @@ CREATE TABLE user (
   password varchar(255)
 );
 
-ALTER TABLE project ADD FOREIGN KEY (user_id) REFERENCES users (id);
+ALTER TABLE project ADD FOREIGN KEY (user_id) REFERENCES user (id);
 
 ALTER TABLE project_partner ADD FOREIGN KEY (project_id) REFERENCES project (id);
 
@@ -176,4 +176,4 @@ ALTER TABLE time_spent ADD FOREIGN KEY (project_id) REFERENCES project (id);
 
 ALTER TABLE time_spent ADD FOREIGN KEY (task_id) REFERENCES task (id);
 
-ALTER TABLE time_spent ADD FOREIGN KEY (user_id) REFERENCES users (id);
+ALTER TABLE time_spent ADD FOREIGN KEY (user_id) REFERENCES user (id);
