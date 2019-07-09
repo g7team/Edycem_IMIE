@@ -1,8 +1,9 @@
-package com.imie.g7.edycem_android.Activity;
+package com.imie.g7.edycem_android.activity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -149,7 +150,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         if (mAuthTask != null) {
             return;
         }
-
         // Reset errors.
         mEmailView.setError(null);
         mPasswordView.setError(null);
@@ -188,8 +188,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // perform the user login attempt.
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
+            mAuthTask.execute((Void) goToHome());
         }
+    }
+
+    public Void goToHome() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        //intent.putExtra("parametre", 123);
+        startActivity(intent);
+        return null;
     }
 
     private boolean isEmailValid(String email) {
@@ -281,7 +288,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailView.setAdapter(adapter);
     }
 
-
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
@@ -348,5 +354,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
         }
     }
+
 }
 
