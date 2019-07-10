@@ -23,21 +23,27 @@ public class CodirValidationController {
         return this.codirValidationService.getById(id);
     }
 
+    @GetMapping
+    public CodirValidationResponse getByProjectId(@PathVariable("project_id") Integer id) {
+        return this.codirValidationService.getByProjectId(id);
+    }
+
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CodirValidationResponse create(@RequestBody CodirValidationRequest codirValidationRequest) {
         return this.codirValidationService.create(codirValidationRequest);
     }
 
-    @PutMapping
+    @PutMapping(value = "/{validation_section_id}")
     @ResponseStatus(HttpStatus.OK)
-    public CodirValidationResponse update(@RequestBody CodirValidationRequest codirValidationRequest) {
+    public CodirValidationResponse update(@PathVariable("validation_section_id") Long validation_section_id, @RequestBody CodirValidationRequest codirValidationRequest) {
         return this.codirValidationService.update(codirValidationRequest);
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/{validation_section_id}")
     @ResponseStatus(HttpStatus.OK)
-    public void delete(@PathVariable("id") Integer id) {
-        this.codirValidationService.delete(id);
+    public void delete(@PathVariable("validation_section_id") Integer validation_section_id) {
+        this.codirValidationService.delete(validation_section_id);
     }
 }

@@ -64,8 +64,12 @@ public class Task {
     @Column(name = "progress")
     private String progress;
 
-    /*@ManyToOne
+    @ManyToOne
     @Column(name = "activity_id")
+<<<<<<< HEAD
     private Activity activity;*/
 >>>>>>> create tasks
+=======
+    private Activity activity;
+>>>>>>> create activity
 }

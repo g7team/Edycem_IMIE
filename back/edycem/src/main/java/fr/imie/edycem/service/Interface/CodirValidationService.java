@@ -17,4 +17,6 @@ public interface CodirValidationService{
     CodirValidationResponse update(CodirValidationRequest codirValidationRequest);
 
     void delete(Integer id);
+
+    CodirValidationResponse getByProjectId(Integer id);
 }

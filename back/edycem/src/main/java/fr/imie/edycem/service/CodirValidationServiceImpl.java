@@ -43,4 +43,7 @@ public class CodirValidationServiceImpl implements CodirValidationService {
     public void delete(Integer id) {
 
     }
+
+    @Override
+    public CodirValidationResponse getByProjectId(Long id) { return null; }
 }

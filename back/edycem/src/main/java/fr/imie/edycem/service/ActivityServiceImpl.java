@@ -5,7 +5,6 @@ import fr.imie.edycem.model.Request.ActivityRequest;
 import fr.imie.edycem.model.Request.ProjectRequest;
 import fr.imie.edycem.model.Response.ActivityResponse;
 import fr.imie.edycem.repository.ActivityRepository;
-import fr.imie.edycem.repository.ProjectRepository;
 import fr.imie.edycem.service.Interface.ActivityService;
 import fr.imie.edycem.service.Interface.ProjectService;
 import org.modelmapper.ModelMapper;
@@ -65,6 +64,6 @@ public class ActivityServiceImpl implements ActivityService {
 
     private Activity requestToDto(ActivityRequest activityRequest) {
         this.mapper = new ModelMapper();
-        return mapper.map(activityRequest ,Activity.class);
+        return mapper.map(activityRequest, Activity.class);
     }
 }

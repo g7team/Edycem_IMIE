@@ -33,9 +33,9 @@ public class TaskController {
         return this.taskService.create(taskRequest);
     }
 
-    @PutMapping
+    @PutMapping(value = "/{task_id}")
     @ResponseStatus(HttpStatus.OK)
-    public TaskResponse update(@RequestBody TaskRequest taskRequest) {
+    public TaskResponse update(@PathVariable("task_id") Long task_id, @RequestBody TaskRequest taskRequest) {
         return this.taskService.update(taskRequest);
     }
 
