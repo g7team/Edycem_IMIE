@@ -1,4 +1,6 @@
 package fr.imie.edycem.model.Request;
 
-public class InventionRequest {
+import fr.imie.edycem.model.Invention;
+
+public class InventionRequest extends Invention {
 }

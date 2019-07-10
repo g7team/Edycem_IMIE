@@ -1,29 +1,34 @@
 package fr.imie.edycem.controller;
 
-import fr.imie.edycem.controller.base.AbstractController;
+import com.google.common.base.Preconditions;
 import fr.imie.edycem.model.Request.ProjectRequest;
 import fr.imie.edycem.model.Response.ProjectResponse;
 
+import fr.imie.edycem.service.Interface.ProjectService;
+import fr.imie.edycem.util.RestPreconditions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 
 @RestController
 @RequestMapping(value="/projects")
-public class ProjectController extends AbstractController<ProjectRequest , ProjectResponse> {
+public class ProjectController {
 
+    @Autowired
+    private ProjectService projectService;
 
-    /*
     @RequestMapping("/")
     public List<ProjectResponse> getProject() {
         return projectService.getAll();
     }
 
    @GetMapping(value = "/{id}")
-    public ProjectResponse getById(@PathVariable("id") Long id) {
+    public ProjectResponse getById(@PathVariable("id") Integer id) {
         return RestPreconditions.checkFound(projectService.getById(id));
-
     }
-
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -33,7 +38,7 @@ public class ProjectController extends AbstractController<ProjectRequest , Proje
     }
 
     @PutMapping(value = "/{id}")
-    public ProjectResponse updateProject(@PathVariable( "id" ) Long id, @RequestBody ProjectRequest projectRequest) {
+    public ProjectResponse updateProject(@PathVariable( "id" ) Integer id, @RequestBody ProjectRequest projectRequest) {
         Preconditions.checkNotNull(projectRequest);
         RestPreconditions.checkFound(this.projectService.getById(id));
         return this.projectService.update(projectRequest);
@@ -41,7 +46,7 @@ public class ProjectController extends AbstractController<ProjectRequest , Proje
 
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void deleteProject(@PathVariable("id") Long id) {
+    public void deleteProject(@PathVariable("id") Integer id) {
         this.projectService.delete(id);
-    }*/
+    }
 }

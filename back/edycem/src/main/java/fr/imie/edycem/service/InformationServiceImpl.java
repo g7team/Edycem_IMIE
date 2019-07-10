@@ -1,6 +1,6 @@
 package fr.imie.edycem.service;
 
-import fr.imie.edycem.exception.MyResourceNotFoundException;
+import fr.imie.edycem.exception.EdycemResourceNotFoundException;
 import fr.imie.edycem.model.Information;
 import fr.imie.edycem.model.Request.InformationRequest;
 import fr.imie.edycem.model.Response.InformationResponse;
@@ -18,11 +18,11 @@ public class InformationServiceImpl implements InformationService {
     private InformationRepository informationRepository;
 
     @Override
-    public InformationResponse getById(Long id) throws MyResourceNotFoundException {
+    public InformationResponse getById(Integer id) throws EdycemResourceNotFoundException {
         Optional<Information> optionalInformation = this.informationRepository.findById(id);
 
         if(optionalInformation.isEmpty()) {
-            throw new MyResourceNotFoundException("Resource Not Found");
+            throw new EdycemResourceNotFoundException("Resource Not Found");
         } else {
             return (InformationResponse) optionalInformation.get();
         }
@@ -39,7 +39,7 @@ public class InformationServiceImpl implements InformationService {
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(Integer id) {
 
     }
 }

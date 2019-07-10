@@ -1,14 +1,10 @@
 package fr.imie.edycem.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+        import javax.persistence.*;
 
 @Entity
+@Table(name = "project")
 public class Project {
-
-
 
     @Id
     @GeneratedValue
@@ -17,13 +13,15 @@ public class Project {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "society")
+    private String society;
 
-    public Project(String name, Integer id) {
-        this.name = name;
-        this.id = id;
+    public Integer getId() {
+        return id;
     }
 
-    public Project() {
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -34,11 +32,11 @@ public class Project {
         this.name = name;
     }
 
-    public Integer getId() {
-        return id;
+    public String getSociety() {
+        return society;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setSociety(String society) {
+        this.society = society;
     }
 }

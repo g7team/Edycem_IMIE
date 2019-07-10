@@ -1,4 +1,6 @@
 package fr.imie.edycem.model.Response;
 
-public class InventionResponse {
+import fr.imie.edycem.model.Invention;
+
+public class InventionResponse extends Invention {
 }

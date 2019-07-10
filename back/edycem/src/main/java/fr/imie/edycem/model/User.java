@@ -1,14 +1,25 @@
 package fr.imie.edycem.model;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 public class User {
 
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "surname")
     private String surname;
+
+    @Column(name = "mail")
     private String mail;
+
+    @Column(name = "password")
     private String password;
 
 
@@ -51,4 +62,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }

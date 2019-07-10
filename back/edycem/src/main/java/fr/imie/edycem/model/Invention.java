@@ -1,11 +1,25 @@
 package fr.imie.edycem.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Invention {
+
+    @Id
+    @GeneratedValue
     private Integer id;
+
+
     private String brevet_name;
+
     private String inventor_name;
+
     private String inpi;
+
     private String rights_brevet;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_id")
     private Project project;
 
     public Integer getId() {

@@ -1,4 +1,6 @@
 package fr.imie.edycem.model.Response;
 
-public class UserResponse {
+import fr.imie.edycem.model.User;
+
+public class UserResponse extends User {
 }

@@ -1,5 +1,8 @@
 package fr.imie.edycem.model.Request;
 
 
-public class ProjectRequest {
+import fr.imie.edycem.model.Project;
+
+public class ProjectRequest extends Request {
+
 }

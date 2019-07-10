@@ -1,7 +1,7 @@
 package fr.imie.edycem.util;
 
 
-import fr.imie.edycem.exception.MyResourceNotFoundException;
+import fr.imie.edycem.exception.EdycemResourceNotFoundException;
 
 public class RestPreconditions {
 
@@ -15,12 +15,12 @@ public class RestPreconditions {
      *
      * @param expression
      *            has value true if found, otherwise false
-     * @throws MyResourceNotFoundException
+     * @throws EdycemResourceNotFoundException
      *             if expression is false, means value not found.
      */
     public static void checkFound(final boolean expression) {
         if (!expression) {
-            throw new MyResourceNotFoundException();
+            throw new EdycemResourceNotFoundException();
         }
     }
 
@@ -29,12 +29,12 @@ public class RestPreconditions {
      *
      * @param resource
      *            has value true if found, otherwise false
-     * @throws MyResourceNotFoundException
+     * @throws EdycemResourceNotFoundException
      *             if expression is false, means value not found.
      */
     public static <T> T checkFound(final T resource) {
         if (resource == null) {
-            throw new MyResourceNotFoundException();
+            throw new EdycemResourceNotFoundException();
         }
 
         return resource;

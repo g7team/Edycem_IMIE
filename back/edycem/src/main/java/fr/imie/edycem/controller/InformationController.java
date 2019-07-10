@@ -1,6 +1,5 @@
 package fr.imie.edycem.controller;
 
-import fr.imie.edycem.controller.base.AbstractController;
 import fr.imie.edycem.model.Request.InformationRequest;
 import fr.imie.edycem.model.Response.InformationResponse;
 import fr.imie.edycem.service.Interface.InformationService;
@@ -10,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value="/projects/{project_id}/infomations")
-public class InformationController extends AbstractController<InformationResponse, InformationRequest> {
+public class InformationController {
 
     @Autowired
     InformationService informationService;
 
     @GetMapping(value = "/{id}")
-    public InformationResponse getById(@PathVariable("id") Long id) {
+    public InformationResponse getById(@PathVariable("id") Integer id) {
         return this.informationService.getById(id);
     }
 
@@ -34,7 +33,7 @@ public class InformationController extends AbstractController<InformationRespons
 
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void delete(@PathVariable("id") Long id) {
+    public void delete(@PathVariable("id") Integer id) {
         this.informationService.delete(id);
     }
 }
