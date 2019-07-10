@@ -3,8 +3,11 @@
 {% block title %}Accueil - Edycem{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated %}
-  Bonjour {{ user.username }}!
+{% if is_authenticated %}
+  Bonjour {{ user.name }} !
+  {% for project in project_list %}
+    {{ project }}
+  {% endfor %}
   <p><a class="btn btn-primary" href="{% url 'logout' %}">Me déconnecter</a></p>
 {% else %}
   <p>Vous n'êtes pas connecté</p>

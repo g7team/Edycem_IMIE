@@ -9,9 +9,7 @@ class Project(models.Model):
 
     id = models.AutoField(primary_key=True)
     societe = models.CharField(max_length=255)
-    user = models.ForeignKey(
-        'Member', models.PROTECT, blank=True, null=True,
-    )
+    user = models.IntegerField()
     nom = models.CharField(max_length=255)
     section_project = models.ForeignKey(
         'SectionProject', models.PROTECT, blank=True, null=True,
@@ -43,21 +41,6 @@ class Project(models.Model):
 
     def __str__(self):
         return self.nom
-
-
-class Member(AbstractUser):
-
-    USER_TYPE_EMPLOYEE = 1
-    USER_TYPE_MANAGER = 2
-    USER_TYPE_CHOICES = [
-        (USER_TYPE_EMPLOYEE, _("Employé")),
-        (USER_TYPE_MANAGER, _("Manager")),
-    ]
-
-    id = models.AutoField(primary_key=True)
-    email = models.EmailField(max_length=255, verbose_name=_("e-mail"))
-    user_type = models.PositiveSmallIntegerField(
-        choices=USER_TYPE_CHOICES, default=USER_TYPE_EMPLOYEE)
 
 
 class SectionProject(models.Model):
@@ -137,9 +120,7 @@ class Activity(models.Model):
     name = models.CharField(max_length=255)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    manager = models.ForeignKey(
-        'Member', models.PROTECT, blank=True, null=True,
-    )
+    manager = models.IntegerField()
     progress = models.PositiveSmallIntegerField(
         default=PROGRESS_PENDING, blank=True, choices=PROGRESS_CHOICES,
     )
@@ -163,9 +144,7 @@ class task(models.Model):
     name = models.CharField(max_length=255)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    manager = models.ForeignKey(
-        'Member', models.PROTECT, blank=True, null=True,
-    )
+    manager = models.IntegerField()
     progress = models.PositiveSmallIntegerField(
         default=PROGRESS_PENDING, blank=True, choices=PROGRESS_CHOICES,
     )
