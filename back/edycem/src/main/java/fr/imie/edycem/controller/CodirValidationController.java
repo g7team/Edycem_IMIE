@@ -37,7 +37,7 @@ public class CodirValidationController {
 
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void delete(@PathVariable("id") Long id) {
+    public void delete(@PathVariable("id") Integer id) {
         this.codirValidationService.delete(id);
     }
 }
