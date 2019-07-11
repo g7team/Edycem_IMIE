@@ -31,9 +31,6 @@ public class Activity {
     @Column(name = "progress")
     private Progress progress;
 
-    @Column(name = "project_id")
-    private int projectId;
-
     public int getId() {
         return id;
     }
@@ -82,11 +79,4 @@ public class Activity {
         this.progress = progress;
     }
 
-    public int getProjectId() {
-        return projectId;
-    }
-
-    public void setProjectId(int projectId) {
-        this.projectId = projectId;
-    }
 }

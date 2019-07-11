@@ -1,8 +1,11 @@
 package fr.imie.edycem.model;
 
 import javax.persistence.*;
+import java.time.Year;
+import java.util.Date;
 
 @Entity
+@Table(name = "information_section")
 public class Information {
 
     @Id
@@ -18,22 +21,23 @@ public class Information {
     @Column(name = "chaire")
     private boolean chaire;
 
-    @Column(name = "echeance" , length = 10)
-    private String echeance;
+    @Column(name = "deadline" , length = 10)
+    private String deadline;
 
-    @Column(name = "objective" , length = 500)
-    private String objective;
+    @Column(name = "objectives" , length = 500)
+    private String objectives;
 
-    @Column(name = "isConfidentialityContract")
+    @Column(name = "confidentiality_contract")
     private boolean isConfidentialityContract;
 
-    @Column(name = "isLicence")
+    @Column(name = "license")
     private boolean isLicence;
 
-    @Column(name = "isBrevet")
-    private boolean isBrevet;
+    @Column(name = "patent")
+    private boolean isPatent;
 
-    @Column(name = "project_id")
-    private int project_id;
+    @OneToOne
+    @JoinColumn(name = "project_id")
+    private Project project;
 
 }

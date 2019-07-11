@@ -3,20 +3,24 @@ package fr.imie.edycem.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "invention_section")
 public class Invention {
 
     @Id
     @GeneratedValue
     private Integer id;
 
+    @Column(name = "patent_name")
+    private String patentName;
 
-    private String brevet_name;
+    @Column(name = "inventor_name")
+    private String inventorName;
 
-    private String inventor_name;
-
+    @Column(name = "inpi")
     private String inpi;
 
-    private String rights_brevet;
+    @Column(name = "patent_right")
+    private String patentRight;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id")
@@ -30,20 +34,20 @@ public class Invention {
         this.id = id;
     }
 
-    public String getBrevet_name() {
-        return brevet_name;
+    public String getPatentName() {
+        return patentName;
     }
 
-    public void setBrevet_name(String brevet_name) {
-        this.brevet_name = brevet_name;
+    public void setPatentName(String patentName) {
+        this.patentName = patentName;
     }
 
-    public String getInventor_name() {
-        return inventor_name;
+    public String getInventorName() {
+        return inventorName;
     }
 
-    public void setInventor_name(String inventor_name) {
-        this.inventor_name = inventor_name;
+    public void setInventorName(String inventorName) {
+        this.inventorName = inventorName;
     }
 
     public String getInpi() {
@@ -54,12 +58,12 @@ public class Invention {
         this.inpi = inpi;
     }
 
-    public String getRights_brevet() {
-        return rights_brevet;
+    public String getPatentRight() {
+        return patentRight;
     }
 
-    public void setRights_brevet(String rights_brevet) {
-        this.rights_brevet = rights_brevet;
+    public void setPatentRight(String patentRight) {
+        this.patentRight = patentRight;
     }
 
     public Project getProject() {

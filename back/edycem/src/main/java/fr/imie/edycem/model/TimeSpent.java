@@ -4,31 +4,32 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "time_spent")
 public class TimeSpent {
 
     @Id
+    @GeneratedValue
     private int id;
 
-    @Column(name = "project_id")
-    private int project_id;
+    @ManyToOne
+    @JoinColumn(name = "project_id" ,  insertable =false , updatable = false)
+    private Project project;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "task_id")
     private Task task;
 
-    @Column(name = "user_id")
-    private int user_id;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(name = "hours")
-    private Date hours;
+    private double hours;
 
     @Column(name = "entry_date")
     private Date entryDate;
 
     @Column(name = "description")
     private String description;
-
-    @Column(name = "project_id")
-    private Integer projectId;
 
 }

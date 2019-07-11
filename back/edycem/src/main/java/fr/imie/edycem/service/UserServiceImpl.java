@@ -61,7 +61,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponse login(UserRequest userRequest) {
-        Optional<User> optionalUser = this.userRepository.findByMailAndPassword(this.requestToDto(userRequest));
+        final User user = this.requestToDto(userRequest);
+        final Optional<User> optionalUser = this.userRepository.findByMailAndPassword(user.getMail() , user.getPassword());
         return optionalUser.map(this::dtoToResponse).orElse(null);
     }
 

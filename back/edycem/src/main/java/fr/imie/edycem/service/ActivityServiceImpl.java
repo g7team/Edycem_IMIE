@@ -32,12 +32,6 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public List<ActivityResponse> getByProjectId(Integer projectId) {
-        List<Activity> activityList = this.activityRepository.findAllByProjectId(projectId);
-        return activityList.stream().map(this::dtoToResponse).collect(Collectors.toList());
-    }
-
-    @Override
     public ActivityResponse create(ActivityRequest activityRequest) {
         return null;
     }

@@ -3,6 +3,7 @@ package fr.imie.edycem.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "codir_validation")
 public class CodirValidation {
 
     @Id
@@ -12,14 +13,11 @@ public class CodirValidation {
     @Column(name = "favorable")
     private Boolean favorable;
 
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "holdingDescription")
+    @Column(name = "holding_description")
     private String holdingDescription;
 
-    @ManyToOne
-    @Column(name = "project_id")
+    @OneToOne
+    @JoinColumn(name = "project_id")
     private Project project;
 
     public Integer getId() {
@@ -38,14 +36,6 @@ public class CodirValidation {
         this.favorable = favorable;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getHoldingDescription() {
         return holdingDescription;
     }
@@ -54,11 +44,4 @@ public class CodirValidation {
         this.holdingDescription = holdingDescription;
     }
 
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
-    }
 }

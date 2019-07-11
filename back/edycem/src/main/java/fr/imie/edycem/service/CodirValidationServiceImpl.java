@@ -19,6 +19,7 @@ public class CodirValidationServiceImpl implements CodirValidationService {
         this.codirValidationRepository = codirValidationRepository;
     }
 
+
     @Override
     public List<CodirValidationResponse> getAll() {
         return null;
@@ -26,6 +27,12 @@ public class CodirValidationServiceImpl implements CodirValidationService {
 
     @Override
     public CodirValidationResponse getById(Integer id) {
+        return null;
+    }
+
+
+    @Override
+    public CodirValidationResponse getByProjectId(Integer id) {
         return null;
     }
 
@@ -44,6 +51,4 @@ public class CodirValidationServiceImpl implements CodirValidationService {
 
     }
 
-    @Override
-    public CodirValidationResponse getByProjectId(Long id) { return null; }
 }

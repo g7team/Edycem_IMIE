@@ -1,6 +1,7 @@
 package fr.imie.edycem.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "project")
@@ -15,6 +16,9 @@ public class Project {
 
     @Column(name = "society")
     private String society;
+
+    @OneToMany(mappedBy = "project")
+    private List<TimeSpent> timeSpentList;
 
     public Integer getId() {
         return id;

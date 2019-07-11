@@ -10,8 +10,6 @@ public interface ActivityService {
 
     List<ActivityResponse> getAll();
 
-    List<ActivityResponse> getByProjectId(Integer id);
-
     ActivityResponse create(ActivityRequest activityRequest);
 
     boolean getById(Integer id);

@@ -28,12 +28,7 @@ public class ActivityController {
     public List<ActivityResponse> getActivity() {
         return this.activityService.getAll();
     }
-
-    @GetMapping(value = "/{project_id}")
-    public List<ActivityResponse> getByProjectId(@PathVariable("project_id") Integer id) {
-        return this.activityService.getByProjectId(id);
-    }
-
+    
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public ActivityResponse createActivity(@RequestBody ActivityRequest activityRequest) {
