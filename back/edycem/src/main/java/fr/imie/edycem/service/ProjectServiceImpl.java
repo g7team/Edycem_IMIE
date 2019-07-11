@@ -39,7 +39,10 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public ProjectResponse create(ProjectRequest request) {
-        return dtoToResponse(this.projectRepository.save(requestToDto(request)));
+        Project project = requestToDto(request);
+        Project newProject = this.projectRepository.save(project);
+        ProjectResponse projectResponse = dtoToResponse(newProject);
+        return projectResponse;
     }
 
     @Override

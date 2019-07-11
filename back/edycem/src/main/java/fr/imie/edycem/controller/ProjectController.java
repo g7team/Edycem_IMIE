@@ -20,7 +20,7 @@ public class ProjectController {
     @Autowired
     private ProjectService projectService;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public List<ProjectResponse> getProject() {
         return projectService.getAll();
     }
