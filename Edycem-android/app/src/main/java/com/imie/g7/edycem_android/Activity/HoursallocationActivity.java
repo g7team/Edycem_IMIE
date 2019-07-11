@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.imie.g7.edycem_android.R;
 
-public class HoursallocationActivity extends AppCompatActivity {
+public class HoursAllocationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

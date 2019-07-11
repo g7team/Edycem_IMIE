@@ -1,23 +1,23 @@
-package com.imie.g7.edycem_android.database.dto;
+package com.imie.g7.edycem_android.database.entity;
 
-public class ProjectDto {
+public class Project {
 
     private int id;
     private String society;
     private String name;
     private int userId;
 
-    public ProjectDto() {
+    public Project() {
     }
 
-    public ProjectDto(int id, String society, String name, int userId) {
+    public Project(int id, String society, String name, int userId) {
         this.id = id;
         this.society = society;
         this.name = name;
         this.userId = userId;
     }
 
-    public ProjectDto(String society, String name, int userId) {
+    public Project(String society, String name, int userId) {
         this.society = society;
         this.name = name;
         this.userId = userId;

@@ -1,6 +1,6 @@
-package com.imie.g7.edycem_android.database.dto;
+package com.imie.g7.edycem_android.database.entity;
 
-public class InformationSectionDto {
+public class InformationSection {
 
     private int id;
     private int annee;
@@ -15,10 +15,10 @@ public class InformationSectionDto {
     private boolean brevet;
     private int projectId;
 
-    public InformationSectionDto() {
+    public InformationSection() {
     }
 
-    public InformationSectionDto(int id, int annee, String priorite, String project, String site,
+    public InformationSection(int id, int annee, String priorite, String project, String site,
                                  String deadline, String objectives, boolean chaire,
                                  boolean confidentialityContract, boolean licence, boolean brevet,
                                  int projectId) {
@@ -36,7 +36,7 @@ public class InformationSectionDto {
         this.projectId = projectId;
     }
 
-    public InformationSectionDto(int annee, String priorite, String project, String site,
+    public InformationSection(int annee, String priorite, String project, String site,
                                  String deadline, String objectives, boolean chaire,
                                  boolean confidentialityContract, boolean licence, boolean brevet,
                                  int projectId) {

@@ -1,6 +1,6 @@
-package com.imie.g7.edycem_android.database.dto;
+package com.imie.g7.edycem_android.database.entity;
 
-public class UsersDto {
+public class Users {
 
     private int id;
     private String name;
@@ -8,10 +8,10 @@ public class UsersDto {
     private String mail;
     private String password;
 
-    public UsersDto() {
+    public Users() {
     }
 
-    public UsersDto(int id, String name, String surname, String mail, String password) {
+    public Users(int id, String name, String surname, String mail, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -19,7 +19,7 @@ public class UsersDto {
         this.password = password;
     }
 
-    public UsersDto(String name, String surname, String mail, String password) {
+    public Users(String name, String surname, String mail, String password) {
         this.name = name;
         this.surname = surname;
         this.mail = mail;
