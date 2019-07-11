@@ -3,8 +3,8 @@ package fr.imie.edycem.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "partner" )
 public class Partner {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
