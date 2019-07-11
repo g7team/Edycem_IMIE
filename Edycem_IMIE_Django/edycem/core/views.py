@@ -7,7 +7,9 @@ from django.urls import reverse
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
-from .forms import LoginForm, CreateProjectForm
+from .forms import (
+    LoginForm, CreateProjectForm, UpdateProjectPart1Form, UpdateProjectPart2Form,
+)
 
 # Create your views here.
 class HomeView(TemplateView):
@@ -101,7 +103,6 @@ class CreateProjectView(FormView):
         )
         response = response.json()
         if not response or response == "Not found":
-            print('non')
             raise Http404
         else:
             messages.success(self.request, 'Le projet a bien été créé !')
@@ -110,3 +111,45 @@ class CreateProjectView(FormView):
     def form_invalid(self, form):
         self.form = form
         return self.get(self.request, *self.args, **self.kwargs)
+
+
+class UpdateProjectPart1View(FormView):
+
+    template_name = "project/update_part1.html"
+    form_class = UpdateProjectPart1Form
+
+    def post(self, request, *args, **kwargs):
+        form = self.get_form()
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def get_success_url(self):
+        return reverse('update_project_part2')
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        company = form.cleaned_data['company']
+        name = form.cleaned_data['name']
+        response = requests.patch(
+            'http://5d25a0f7d92454001493175d.mockapi.io/edycem/projet/', 
+            data = {
+              "societe": company,
+              "name": name
+            }
+        )
+        response = response.json()
+        if not response or response == "Not found":
+            raise Http404
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        self.form = form
+        return self.get(self.request, *self.args, **self.kwargs)
+
+
+class UpdateProjectPart2View(FormView):
+
+    template_name = "project/update_part2.html"
+    form_class = UpdateProjectPart2Form
