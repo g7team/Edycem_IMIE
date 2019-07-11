@@ -17,7 +17,7 @@ public class TimeController {
     private TimeSpentService timeSpentService;
 
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public List<TimeSpentResponse> getAll() {
         return timeSpentService.getAll();
     }

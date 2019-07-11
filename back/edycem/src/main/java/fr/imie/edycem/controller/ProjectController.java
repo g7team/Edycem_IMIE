@@ -25,7 +25,7 @@ public class ProjectController {
         return projectService.getAll();
     }
 
-   @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{id}")
     public ProjectResponse getById(@PathVariable("id") Integer id) {
         return RestPreconditions.checkFound(projectService.getById(id));
     }

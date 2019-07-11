@@ -18,7 +18,7 @@ public class InventionController {
     @Autowired
     private InventionService inventionService;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public List<InventionResponse> getInvention() {
         return inventionService.getAll();
     }

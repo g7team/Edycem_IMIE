@@ -18,7 +18,7 @@ public class PartnerController {
     @Autowired
     private PartnerService partnerService;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public List<PartnerResponse> getPartner() {
         return partnerService.getAll();
     }

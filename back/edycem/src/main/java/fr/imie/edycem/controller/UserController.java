@@ -19,7 +19,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public List<UserResponse> getUser() {
         return userService.getAll();
     }

@@ -21,7 +21,7 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public List<TaskResponse> getTask() {
         return this.taskService.getAll();
     }
