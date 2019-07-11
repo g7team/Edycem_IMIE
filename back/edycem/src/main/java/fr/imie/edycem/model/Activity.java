@@ -4,29 +4,21 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-<<<<<<< HEAD
+
 import java.util.Date;
 import fr.imie.edycem.model.Enum.*;
 
-=======
-import java.sql.Date;
->>>>>>> create activity
 
 @Entity
 public class Activity {
 
     @Id
     @GeneratedValue
-<<<<<<< HEAD
     private int id;
-=======
-    private Integer id;
->>>>>>> create activity
 
     @Column(name = "name")
     private String name;
 
-<<<<<<< HEAD
     @Column(name = "start_date")
     private Date startDate;
 
@@ -97,6 +89,4 @@ public class Activity {
     public void setProjectId(int projectId) {
         this.projectId = projectId;
     }
-=======
->>>>>>> create activity
 }

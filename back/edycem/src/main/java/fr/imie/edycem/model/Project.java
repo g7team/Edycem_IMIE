@@ -1,6 +1,6 @@
 package fr.imie.edycem.model;
 
-        import javax.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "project")

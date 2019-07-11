@@ -16,8 +16,12 @@ import java.util.List;
  @RequestMapping(value="/activity")
 public class ActivityController {
 
+    private final ActivityService activityService;
+
     @Autowired
-    private ActivityService activityService;
+    public ActivityController(ActivityService activityService) {
+        this.activityService = activityService;
+    }
 
 
     @GetMapping("/")

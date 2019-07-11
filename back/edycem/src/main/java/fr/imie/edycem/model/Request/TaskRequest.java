@@ -1,4 +1,6 @@
 package fr.imie.edycem.model.Request;
 
-public class TaskRequest {
+import fr.imie.edycem.model.Task;
+
+public class TaskRequest extends Task {
 }

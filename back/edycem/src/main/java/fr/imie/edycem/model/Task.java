@@ -1,33 +1,23 @@
 package fr.imie.edycem.model;
 
-<<<<<<< HEAD
 import fr.imie.edycem.model.Enum.Progress;
 
 import javax.persistence.*;
 import java.util.Date;
-=======
-import fr.imie.edycem.util.Progress;
 
-import javax.persistence.*;
-import java.sql.Date;
->>>>>>> create tasks
 
 @Entity
+@Table(name = "task")
 public class Task {
 
     @Id
     @GeneratedValue
-<<<<<<< HEAD
-    private int id;
-=======
     private Integer id;
->>>>>>> create tasks
 
     @Column(name = "name")
     private String name;
 
     @Column(name = "start_date")
-<<<<<<< HEAD
     private Date startDate;
 
     @Column(name = "end_date")
@@ -40,11 +30,11 @@ public class Task {
     @JoinColumn(name = "activity_id")
     private Activity activity;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -55,21 +45,37 @@ public class Task {
     public void setName(String name) {
         this.name = name;
     }
-=======
-    private Date start_date;
 
-    @Column(name = "end_date")
-    private Date end_date;
+    public Date getStartDate() {
+        return startDate;
+    }
 
-    @Column(name = "progress")
-    private String progress;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
 
-    @ManyToOne
-    @Column(name = "activity_id")
-<<<<<<< HEAD
-    private Activity activity;*/
->>>>>>> create tasks
-=======
-    private Activity activity;
->>>>>>> create activity
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public Progress getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Progress progress) {
+        this.progress = progress;
+    }
+
+    public Activity getActivity() {
+        return activity;
+    }
+
+    public void setActivity(Activity activity) {
+        this.activity = activity;
+    }
+
 }

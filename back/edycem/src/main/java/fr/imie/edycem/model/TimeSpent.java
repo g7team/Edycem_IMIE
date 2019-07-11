@@ -1,8 +1,6 @@
 package fr.imie.edycem.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -14,8 +12,9 @@ public class TimeSpent {
     @Column(name = "project_id")
     private int project_id;
 
-    @Column(name = "task_id")
-    private int task_id;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "task_id")
+    private Task task;
 
     @Column(name = "user_id")
     private int user_id;

@@ -15,8 +15,8 @@ public class CodirValidation {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "holding_description")
-    private String holding_description;
+    @Column(name = "holdingDescription")
+    private String holdingDescription;
 
     @ManyToOne
     @Column(name = "project_id")
@@ -46,12 +46,12 @@ public class CodirValidation {
         this.description = description;
     }
 
-    public String getHolding_description() {
-        return holding_description;
+    public String getHoldingDescription() {
+        return holdingDescription;
     }
 
-    public void setHolding_description(String holding_description) {
-        this.holding_description = holding_description;
+    public void setHoldingDescription(String holdingDescription) {
+        this.holdingDescription = holdingDescription;
     }
 
     public Project getProject() {

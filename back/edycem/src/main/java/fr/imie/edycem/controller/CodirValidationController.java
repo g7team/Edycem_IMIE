@@ -37,13 +37,14 @@ public class CodirValidationController {
 
     @PutMapping(value = "/{validation_section_id}")
     @ResponseStatus(HttpStatus.OK)
-    public CodirValidationResponse update(@PathVariable("validation_section_id") Long validation_section_id, @RequestBody CodirValidationRequest codirValidationRequest) {
+    public CodirValidationResponse update(@PathVariable("validation_section_id") Long id,
+                                          @RequestBody CodirValidationRequest codirValidationRequest) {
         return this.codirValidationService.update(codirValidationRequest);
     }
 
     @DeleteMapping(value = "/{validation_section_id}")
     @ResponseStatus(HttpStatus.OK)
-    public void delete(@PathVariable("validation_section_id") Integer validation_section_id) {
-        this.codirValidationService.delete(validation_section_id);
+    public void delete(@PathVariable("validation_section_id") Integer id) {
+        this.codirValidationService.delete(id);
     }
 }

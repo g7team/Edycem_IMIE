@@ -1,4 +1,6 @@
 package fr.imie.edycem.model.Request;
 
-public class CodirValidationRequest {
+import fr.imie.edycem.model.CodirValidation;
+
+public class CodirValidationRequest extends CodirValidation {
 }
