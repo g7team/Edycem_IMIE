@@ -5,9 +5,54 @@
 {% block content %}
 {% if is_authenticated %}
   Bonjour {{ user.name }} !
-  {% for project in project_list %}
-    {{ project }}
-  {% endfor %}
+
+        <a href="{% url 'create_project' %}"
+       class="btn btn-success btn-sm">
+        <span class="glyphicon glyphicon-edit">Create New projet</span></a>
+
+
+    <table summary="project_list">
+<tr>
+    <th>project.id</th>
+    <th>name</th>
+    <th>societe</th>
+    <th>user_id</th>
+    <th>actions</th>
+
+</tr>
+{% for project in project_list %}
+
+        <tr>
+            <td>{{ project.project_id}}</td>
+            <td>{{ project.name}}</td>
+            <td>{{ project.societe}}</td>
+            <td>{{ project.user_id}}</td>
+            <td>
+{#                <div class="btn-group" role="group" >#}
+{#                                <a href="{% url 'box_detail' box.id  %}" role="button"#}
+{#                                   class="btn btn-success btn-sm">#}
+{#                                    <span class="glyphicon glyphicon-edit">#}
+{#                                        Consultation Projet#}
+{#                                    </span>#}
+{#                                </a>#}
+{#                                <a href="{% url 'box_update' box.id %}" role="button"#}
+{#                                   class="btn btn-warning btn-sm">#}
+{#                                    <i class="fa fa-pencil" aria-hidden="true" style="color: black">#}
+{#                                        Modifier le projet#}
+{#                                    </i>#}
+{#                                </a>#}
+{#                                <a href="{% url 'box_delete' box.id %}" class="btn btn-danger btn-sm">#}
+{#                                    <i class="fa fa-trash" aria-hidden="true" style="color: black">#}
+{#                                        Supprimer le projet#}
+{#                                    </i>#}
+{#                                </a>#}
+{#                            </div>#}
+            </td>
+        </tr>
+
+{% endfor %}
+</table>
+
   <p><a class="btn btn-primary" href="{% url 'logout' %}">Me déconnecter</a></p>
 {% else %}
   <p>Vous n'êtes pas connecté</p>
