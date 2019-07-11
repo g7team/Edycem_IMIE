@@ -29,8 +29,10 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.imie.g7.edycem_android.R;
+import com.imie.g7.edycem_android.database.dao.UsersDao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -162,7 +164,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+        /*if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
@@ -177,6 +179,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
+        }*/
+
+        if (!isValidConnexion(email, password)) {
+            cancel = true;
+            Toast.makeText(this,"Oups ! mauvais email ou mauvais mot de passe", Toast.LENGTH_LONG);
         }
 
         if (cancel) {
@@ -188,26 +195,33 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // perform the user login attempt.
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) goToHome());
+            mAuthTask.execute((Void) goToHome(email, password));
         }
     }
 
-    public Void goToHome() {
+    public Void goToHome(String email, String password) {
         Intent intent = new Intent(this, HomeActivity.class);
-        //intent.putExtra("parametre", 123);
+        intent.putExtra("userId", UsersDao.getUserByEmail(this, email, password));
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         return null;
     }
 
-    private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
+    private boolean isValidConnexion(String email, String password) {
+        int result = UsersDao.getUserByEmail(this, email, password);
+        if (result < 1) { return false; }
+        else { return true; }
     }
 
-    private boolean isPasswordValid(String password) {
+    /*private boolean isEmailValid(String email) {
+        //TODO: Replace this with your own logic
+        return email.contains("@");
+    }*/
+
+    /*private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
         return password.length() > 4;
-    }
+    }*/
 
     /**
      * Shows the progress UI and hides the login form.
